@@ -10,4 +10,4 @@ The 3-6 school festival website.
 # Contact
 If you want to contact me, please email above adress.  <br>
 contact[atmark]t413k.net<br>
-* please [atmark] with @
+\* please [atmark] with @
