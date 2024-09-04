@@ -1,4 +1,5 @@
-The 3-6 school festival website.
+The 3-6 school festival website. <br>
+**Attention: Due to a lack of time, the process of making this product is a bit messy.**
 
 # Technologies
 | Category  | Content                 |
