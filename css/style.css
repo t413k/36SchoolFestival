@@ -172,7 +172,7 @@ td {
 
 .link-card:hover {
     color: #f15560;
-    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+    transition: .2s;
 }
 
 .link-card a {
