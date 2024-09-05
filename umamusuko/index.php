@@ -2,18 +2,24 @@
 
 <?php
 
-$vote1 = 0;
-$vote2 = 0;
-$vote3 = 0;
-$vote4 = 0;
-$vote5 = 0;
-$vote6 = 0;
+$vote = file("vote.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
-// 上から順番になってる
-// 文末;を絶対忘れないで
-// 半角で入力
+// $vote1 = $lines[0];
+// $vote2 = $lines[1];
+// $vote3 = $lines[2];
+// $vote4 = $lines[3];
+// $vote5 = $lines[4];
+// $vote6 = $lines[5];
+
+// $uma1 = [100, 50];
+
+// sort($money);
 
 ?>
+
+<!-- <?php
+  // print $moneyA[0]
+?> -->
 
 <head>
   <?php include("../config.html"); ?>
@@ -30,10 +36,78 @@ $vote6 = 0;
       <p>♦ 開始時刻は放送します！</p>
       <p>♦ オッズは人気順に<span class="red-u">2.0倍</span>, <span class="red-u">5.0倍</span>, <span
           class="red-u">10倍</span>,<span class="red-u">30倍</span>です．</p>
-      <b class="red">♦ 現在の合計投票数: <?php print $vote1 + $vote2 + $vote3 + $vote4 + $vote5 + $vote6;?>      </b>
+      <b class="red">♦ 現在の合計投票数: <?php print array_sum($vote)?>      </b>
     </div>
 
-    <div class="warn-box">
+
+    <div>
+    <h3><b>第5回 <spann class="red">[受付中] XX:XX~</span></b></h3>
+    <table border="solid 2px #FDF2F1" cellspacing="0" cellpadding="10" bgcolor="1b1922">
+        <tr>
+            <th>No.</th>
+            <th>投票数</th>
+            <th>名前</th>
+            <th>オッズ</th>
+            <th>結果</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>
+              <?php print $vote[0];?>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>
+              <?php print $vote[1];?>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>
+              <?php print $vote[2];?>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>
+                <?php print $vote[3];?>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>
+                <?php print $vote[4];?>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>
+                <?php print $vote[5];?>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+
+    <div class="warn-box notify-box">
       <i class="fa-solid fa-circle-info"></i>
       <span>本日はありがとうございました．また明日も運営いたします！<br/>本日換キヨし忘れた方は，明日換キヨできます！</span>
     </div>
