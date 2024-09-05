@@ -1,66 +1,18 @@
 <div>
     <h3><b>第5回 <spann class="red">[受付中] XX:XX~</span></b></h3>
-    <table border="solid 2px #FDF2F1" cellspacing="0" cellpadding="10" bgcolor="1b1922">
-        <tr>
-            <th>No.</th>
-            <th>投票数</th>
-            <th>名前</th>
-            <th>オッズ</th>
-            <th>結果</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>
-                <?php print $vote1;?>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>
-                <?php print $vote2;?>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>
-                <?php print $vote3;?>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>
-                <?php print $vote4;?>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>
-                <?php print $vote5;?>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>
-                <?php print $vote6;?>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
+    <?php
+    echo "<table class='umamusuk-odds_datble'>";
+    echo "<tr><th>No.</th><th>投票数</th><th>名前</th><th>オッズ</th><th>結果</th></tr>";
+    for ($i = 0; $i < count($vote); $i++) {
+        echo "<tr>";
+        echo "<td>" . $No[$i] . "</td>";
+        echo "<td>" . $vote[$i] . "</td>";
+        echo "<td>" . $Name[$i] . "</td>";
+        echo "<td>" . $vote_to_odds[$i] . "</td>";
+        echo "<td>" . $Win[$i] . "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+    ?>
+
 </div>

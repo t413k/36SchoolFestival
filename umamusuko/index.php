@@ -33,36 +33,17 @@ foreach ($vote as $v) {
     <div class="how_to_play">
       <p>♦ 単勝勝ち (1人1馬のみ投票可能) のみです！</p>
       <p>♦ 開始時刻は放送します！</p>
-      <p>♦ オッズは人気順に<span class="red-u">2.0倍</span>, <span class="red-u">5.0倍</span>, <span
-          class="red-u">10倍</span>,<span class="red-u">30倍</span>です．</p>
+      <p>♦ オッズ・投票者数は自動的に更新されます．</p>
       <b class="red">♦ 現在の合計投票数: <?php print array_sum($vote)?>      </b>
     </div>
 
 
-    <div>
-      <h3><b>第5回 <spann class="red">[受付中] XX:XX~</span></b></h3>
-      <!-- <table border="solid 2px #FDF2F1" cellspacing="0" cellpadding="10" bgcolor="1b1922"> -->
-      <?php
-      echo "<table class='umamusuk-odds_datble'>";
-      echo "<tr><th>No.</th><th>投票数</th><th>名前</th><th>オッズ</th><th>結果</th></tr>";
-      for ($i = 0; $i < count($vote); $i++) {
-          echo "<tr>";
-          echo "<td>" . $No[$i] . "</td>";
-          echo "<td>" . $vote[$i] . "</td>";
-          echo "<td>" . $Name[$i] . "</td>";
-          echo "<td>" . $vote_to_odds[$i] . "</td>";
-          echo "<td>" . $Win[$i] . "</td>";
-          echo "</tr>";
-      }
-      echo "</table>";
-      ?>
 
-    </div>
 
-    <div class="warn-box notify-box">
+    <!-- <div class="warn-box notify-box">
       <i class="fa-solid fa-circle-info"></i>
       <span>本日はありがとうございました．また明日も運営いたします！<br/>本日換キヨし忘れた方は，明日換キヨできます！</span>
-    </div>
+    </div> -->
 
 
 
