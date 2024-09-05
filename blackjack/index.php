@@ -12,9 +12,9 @@
     <main>
         <h2>HOW TO PLAY?</h2>
         <p>♦ J, Q, Kは10と同じ<br/>
-♦ Aは1or10を好きに選べる<br/>
+♦ Aは1or11を好きに選べる<br/>
 ♦ 出たカードの合計がディーラーより高ければ<span class="red-u">2倍</span>勝ち / 21で勝てば<span class="red-u">3倍</span>勝ち / ディーラーと同点なら<span class="red-u">等倍</span><br/>
-♦ ディーラーに負けなければ<span class="red-u">全没収</span><br/>
+♦ ディーラーに負ければ<span class="red-u">全没収</span><br/>
 　 21以上になってもボットン(<span class="red-u">全没収</spaN>)</p>
         <h2>TECHNIQUE</h2>
         <p>♦ 11なら絶対引いたほうが良い！<br/>

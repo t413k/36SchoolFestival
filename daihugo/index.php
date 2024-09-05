@@ -17,8 +17,8 @@
 　 そして，2よりも強い！<br>
 ♦ チップ<br>
 　 最初に出すチップの枚数を決めて，<br>
-　 大富豪なら<span class="red-u">5倍</span>，富豪なら<span class="red-u">2倍</span>，平民なら<span class="red-u">等倍</span>，<br>
-　 貧民なら<span class="red-u">1/2倍</span>，大貧民なら<span class="red-u">全没収</span>になる．</p>
+　 大富豪なら<span class="red-u">3倍</span>，富豪なら<span class="red-u">2倍</span>，平民なら<span class="red-u">等倍</span>，<br>
+　 貧民なら<span class="red-u">全没収</span>，大貧民なら<span class="red-u">全没収</span>になる．</p>
 
         <h2>TECHNIQUE</h2>
         <p>
