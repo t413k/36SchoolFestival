@@ -167,7 +167,6 @@ td {
 .container {
     display: flex;
     flex-wrap: wrap !important;
-    /* flexアイテムを折り返す（複数行に配置する） */
 }
 
 .column {
@@ -271,10 +270,9 @@ td {
 
 /* ACCORDION-BOX */
 
-/* .accordion-008 * {
-    position: relative;
-    z-index: -1;
-} */
+.details-wrapper {
+    width: 100%;
+}
 
 .accordion-008 {
     width: 100%;
@@ -315,7 +313,6 @@ td {
 .accordion-008 summary::after {
     display: none;
 }
-
 
 /* === PAGES === */
 .umamusuko th,
