@@ -2,171 +2,233 @@
 
 <?php
 
-$vote1 = 1;
-$vote2 = 2;
+$vote1 = 0;
+$vote2 = 0;
 $vote3 = 0;
 $vote4 = 0;
+$vote5 = 0;
+$vote6 = 0;
+
 // 上から順番になってる
-// 文末に;を絶対忘れないで
+// 文末;を絶対忘れないで
 // 半角で入力
 
 ?>
 
 <head>
-    <?php include("../config.html"); ?>
-    <title>キヨミランド - ウマムスコ</title>
+  <?php include("../config.html"); ?>
+  <title>キヨミランド - ウマムスコ</title>
 </head>
 
-<body>
-    <?php include("../header.html"); ?>
-    <h1 class="gamename">ウマムスコ</h1>
-    <div class="under_title"></div>
-    <span>* 単勝勝ちのみです！<br>開始時刻は放送します！</span><br><span>10分おきに更新</span>
-    <div>オッズは人気順に<span class="red-u">2.0倍</span>, <span class="red-u">5.0倍</span>, <span class="red-u">10倍</span>, <span class="red-u">30倍</span>, </div>
-    現在の投票数: <?php
-                print $vote1 + $vote2 + $vote3 + $vote4;
-                ?>
-    <main>
+<body class="umamusuko">
+  <?php include("../header.html"); ?>
+  <h1 class="gamename">ウマムスコ</h1>
+  <div class="under_title"></div>
+  <main>
+    <div class="how_to_play">
+      <p>♦ 単勝勝ち (1人1馬のみ投票可能) のみです！</p>
+      <p>♦ 開始時刻は放送します！</p>
+      <p>♦ オッズは人気順に<span class="red-u">2.0倍</span>, <span class="red-u">5.0倍</span>, <span
+          class="red-u">10倍</span>,<span class="red-u">30倍</span>です．</p>
+      <b class="red">♦ 現在の合計投票数: <?php print $vote1 + $vote2 + $vote3 + $vote4 + $vote5 + $vote6;?>      </b>
     </div>
-        <h3>第3回 <b class="red">未定</b></h2>
-        <table border="solid 2px #FDF2F1" cellspacing="0" cellpadding="10" bgcolor="1b1922">
+
+    <div class="warn-box">
+      <i class="fa-solid fa-circle-info"></i>
+      <span>本日はありがとうございました．また明日も運営いたします！<br/>本日換キヨし忘れた方は，明日換キヨできます！</span>
+    </div>
+
+
+
+    <div class="warn-box">
+        <i class="fa-solid fa-circle-info"></i>
+        <span>まだありません．</span>
+    </div>
+
+
+
+    <details class="accordion-008">
+      <summary>> 過去のゲーム</summary>
+      <h2>09/06(金)</h2>
+      <div class="warn-box">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>まだありません．</span>
+      </div>
+      <h2>09/05(木)</h2>
+      <div>
+        <h3><b>第4回 <spann class="red">[締切] 15:45~</span></b></h3>
+          <table border="solid 2px #FDF2F1" cellspacing="0" cellpadding="10" bgcolor="1b1922">
             <tr>
-                <th>No.</th>
-                <th>投票数</th>
-                <th>名前</th>
-                <th>オッズ</th> 
-                <th>結果</th> 
+              <th>No.</th>
+              <th>投票数</th>
+              <th>名前</th>
+              <th>オッズ</th>
+              <th>結果</th>
             </tr>
             <tr>
               <td>1</td>
-              <td><?php
-                print $vote1;
-                ?>
+              <td>6
               </td>
-                <td>シバサンブラック</td>
-                <td></td>
-                <td></td>
+              <td>マエダマックイーン</td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
-                <td>2</td>
-              <td><?php
-                print $vote2;
-                ?>
+              <td>2</td>
+              <td>4
               </td>
-                <td>メイコウダイオー</td>
-                <td></td>
-                <td></td>
+              <td>シバサンブラック</td>
+              <td>5</td>
+              <td>◎</td>
             </tr>
             <tr>
-                <td>3</td>
-              <td><?php
-                print $vote3;
-                ?>
+              <td>3</td>
+              <td>6
               </td>
-                <td>ソーメインパクト</td>
-                <td></td>
-                <td></td>
+              <td>メイコウダイオー</td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
-                <td>4</td>
-              <td><?php
-                print $vote4;
-                ?>
+              <td>4</td>
+              <td>5
               </td>
-                <td>ミズユニバース</td>
-                <td></td>
-                <td></td>
+              <td>シスタンシップ</td>
+              <td></td>
+              <td></td>
             </tr>
-        </table>
-    </div>
-
-    <details class="accordion-008">
-            <summary>> 過去のゲーム</summary>
-    </div>
-        <h3>第2回 締切 <b class="red">11:00~</b></h2>
-        <table border="solid 2px #FDF2F1" cellspacing="0" cellpadding="10" bgcolor="1b1922">
+          </table>
+      </div>
+      <div>
+        <h3><b>第3回 <spann class="red">[締切] 14:30~</span></b></h3>
+          <table border="solid 2px #FDF2F1" cellspacing="0" cellpadding="10" bgcolor="1b1922">
             <tr>
-                <th>No.</th>
-                <th>投票数</th>
-                <th>名前</th>
-                <th>オッズ</th> 
-                <th>結果</th>
+              <th>No.</th>
+              <th>投票数</th>
+              <th>名前</th>
+              <th>オッズ</th>
+              <th>結果</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>12
+              </td>
+              <td>シバサンブラック</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>10
+              </td>
+              <td>メイコウダイオー</td>
+              <td>5</td>
+              <td>◎</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>11
+              </td>
+              <td>ソーメインパクト</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>7
+              </td>
+              <td>ミズユニバース</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+      </div>
+      <div>
+        <h3><b>第2回 <spann class="red">[締切] 11:00~</span></b></h3>
+          <table border="solid 2px #FDF2F1" cellspacing="0" cellpadding="10" bgcolor="1b1922">
+            <tr>
+              <th>No.</th>
+              <th>投票数</th>
+              <th>名前</th>
+              <th>オッズ</th>
+              <th>結果</th>
             </tr>
             <tr>
               <td>1</td>
               <td>16
               </td>
-                <td>マエダマックイーン</td>
-                <td>5</td>
+              <td>マエダマックイーン</td>
+              <td>5</td>
               <td>◎</td>
             </tr>
             <tr>
-                <td>2</td>
+              <td>2</td>
               <td>10
               </td>
-                <td>ソーメインパクト</td>
-                <td>10</td>
-                <td></td>
+              <td>ソーメインパクト</td>
+              <td>10</td>
+              <td></td>
             </tr>
             <tr>
-                <td>3</td>
+              <td>3</td>
               <td>6
               </td>
-                <td>ミズユニバース</td>
-                <td>30</td>
-                <td></td>
+              <td>ミズユニバース</td>
+              <td>30</td>
+              <td></td>
             </tr>
             <tr>
-                <td>4</td>
+              <td>4</td>
               <td>12
               </td>
-                <td>シスタンシップ</td>
-                <td>2</td>
-                <td></td>
+              <td>シスタンシップ</td>
+              <td>2</td>
+              <td></td>
             </tr>
-        </table>
-    </div>
-    </div>
-        <h3>第1回 10:00~</h2>
-        <table border="solid 2px #FDF2F1" cellspacing="0" cellpadding="10" bgcolor="1b1922">
+          </table>
+      </div>
+      <div>
+        <h3><b>第1回 <spann class="red">[締切] 10:00~</span></b></h3>
+          <table border="solid 2px #FDF2F1" cellspacing="0" cellpadding="10" bgcolor="1b1922">
             <tr>
-                <th>No.</th>
-                <th>投票数</th>
-                <th>名前</th>
-                <th>オッズ</th>
-                <th>結果</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>3</td>
-                <td>シバサンブラック</td>
-                <td>5</td>
-                <td></td>
+              <th>No.</th>
+              <th>投票数</th>
+              <th>名前</th>
+              <th>オッズ</th>
+              <th>結果</th>
             </tr>
             <tr>
-                <td>2</td>
-                <td>6</td>
-                <td>メイコウダイオー</td>
-                <td>5</td>
-                <td>◎</td>
+              <td>1</td>
+              <td>3</td>
+              <td>シバサンブラック</td>
+              <td>5</td>
+              <td></td>
             </tr>
             <tr>
-                <td>3</td>
-                <td>8</td>
-                <td>ソーメインパクト</td>
-                <td>5</td>
-                <td></td>
+              <td>2</td>
+              <td>6</td>
+              <td>メイコウダイオー</td>
+              <td>5</td>
+              <td>◎</td>
             </tr>
             <tr>
-                <td>4</td>
-                <td></td>
-                <td>シスタンシップ</td>
-                <td>5</td>
-                <td></td>
+              <td>3</td>
+              <td>8</td>
+              <td>ソーメインパクト</td>
+              <td>5</td>
+              <td></td>
             </tr>
-        </table>
-    </div>
-        </details>
-    </main>
-    <?php include("../footer.html"); ?>
+            <tr>
+              <td>4</td>
+              <td></td>
+              <td>シスタンシップ</td>
+              <td>5</td>
+              <td></td>
+            </tr>
+          </table>
+      </div>
+
+    </details>
+  </main>
+  <?php include("../footer.html"); ?>
 </body>
