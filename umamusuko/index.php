@@ -3,23 +3,22 @@
 <?php
 
 $vote = file("vote.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+$odds = [30, 20, 10, 5, 3, 2]; // 左から順番に低くする！
+$No = [1, 2, 3, 4, 5, 6];
+$Name = ['', '', '', '', '', ''];
+$Win = ["", "", "", "", "", ""];
 
-// $vote1 = $lines[0];
-// $vote2 = $lines[1];
-// $vote3 = $lines[2];
-// $vote4 = $lines[3];
-// $vote5 = $lines[4];
-// $vote6 = $lines[5];
+// voteの降順に並び替えた配列を作成
+$sorted_vote = $vote;
+rsort($sorted_vote);
 
-// $uma1 = [100, 50];
-
-// sort($money);
-
+// voteの値に対応するoddsの値を取得
+$vote_to_odds = [];
+foreach ($vote as $v) {
+    $index = array_search($v, $sorted_vote);
+    $vote_to_odds[] = $odds[$index];
+}
 ?>
-
-<!-- <?php
-  // print $moneyA[0]
-?> -->
 
 <head>
   <?php include("../config.html"); ?>
@@ -41,71 +40,24 @@ $vote = file("vote.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
 
     <div>
-    <h3><b>第5回 <spann class="red">[受付中] XX:XX~</span></b></h3>
-    <table border="solid 2px #FDF2F1" cellspacing="0" cellpadding="10" bgcolor="1b1922">
-        <tr>
-            <th>No.</th>
-            <th>投票数</th>
-            <th>名前</th>
-            <th>オッズ</th>
-            <th>結果</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>
-              <?php print $vote[0];?>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>
-              <?php print $vote[1];?>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>
-              <?php print $vote[2];?>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>
-                <?php print $vote[3];?>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>
-                <?php print $vote[4];?>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>
-                <?php print $vote[5];?>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-</div>
+      <h3><b>第5回 <spann class="red">[受付中] XX:XX~</span></b></h3>
+      <!-- <table border="solid 2px #FDF2F1" cellspacing="0" cellpadding="10" bgcolor="1b1922"> -->
+      <?php
+      echo "<table class='umamusuk-odds_datble'>";
+      echo "<tr><th>No.</th><th>投票数</th><th>名前</th><th>オッズ</th><th>結果</th></tr>";
+      for ($i = 0; $i < count($vote); $i++) {
+          echo "<tr>";
+          echo "<td>" . $No[$i] . "</td>";
+          echo "<td>" . $vote[$i] . "</td>";
+          echo "<td>" . $Name[$i] . "</td>";
+          echo "<td>" . $vote_to_odds[$i] . "</td>";
+          echo "<td>" . $Win[$i] . "</td>";
+          echo "</tr>";
+      }
+      echo "</table>";
+      ?>
+
+    </div>
 
     <div class="warn-box notify-box">
       <i class="fa-solid fa-circle-info"></i>

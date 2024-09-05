@@ -320,11 +320,18 @@ td {
 /* === PAGES === */
 .umamusuko th,
 .umamusuko td {
+    border: solid 1px #FDF2F1;
     font-weight: 1000;
 }
 
 .umamusuko h3 {
     font-family: "Zen Kurenaido";
+}
+
+.umamusuko-odds_table {
+    border: solid 2px #FDF2F1;
+    padding: 10
+        /* background-color: #1b1922 */
 }
 
 .how_to_play p,
