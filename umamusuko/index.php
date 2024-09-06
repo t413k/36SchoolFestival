@@ -3,10 +3,10 @@
 <?php
 
 $vote = file("vote.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-$odds = [30, 20, 10, 5, 3, 2]; // 左から順番に低くする！
+$odds = [4, 10, 20, 60]; // 左から順番に低くする！
 $No = [1, 2, 3, 4, 5, 6];
-$Name = ['', '', '', '', '', ''];
-$Win = ["", "", "", "", "", ""];
+$Name = ['マエダマックイーン/???→キヨミンシップ', 'シマアケボノ/ミズユニヴァース', 'シバサンブラック/メイコウダイオー', 'ソーメインパクト/シスタンシップ', '―', '―'];
+$Win = ["◎", "", "", "", "", ""];
 
 // voteの降順に並び替えた配列を作成
 $sorted_vote = $vote;
@@ -39,19 +39,24 @@ foreach ($vote as $v) {
 
 
 
+    <div>
+    <h3><b>第5回 <spann class="red">[締切] 11:45~</span></b></h3>
+    <?php
+    echo "<table class='umamusuk-odds_datble'>";
+    echo "<tr><th>No.</th><th>投票数</th><th>名前</th><th>オッズ</th><th>結果</th></tr>";
+    for ($i = 0; $i < count($vote); $i++) {
+        echo "<tr>";
+        echo "<td>" . $No[$i] . "</td>";
+        echo "<td>" . $vote[$i] . "</td>";
+        echo "<td>" . $Name[$i] . "</td>";
+        echo "<td>" . $vote_to_odds[$i] . "</td>";
+        echo "<td>" . $Win[$i] . "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+    ?>
 
-    <!-- <div class="warn-box notify-box">
-      <i class="fa-solid fa-circle-info"></i>
-      <span>本日はありがとうございました．また明日も運営いたします！<br/>本日換キヨし忘れた方は，明日換キヨできます！</span>
-    </div> -->
-
-
-
-    <div class="warn-box">
-        <i class="fa-solid fa-circle-info"></i>
-        <span>まだありません．</span>
-    </div>
-
+</div>
 
 
     <details class="accordion-008">

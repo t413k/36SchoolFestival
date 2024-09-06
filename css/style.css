@@ -105,19 +105,19 @@ td {
     left: -30px;
     width: 100vw;
     height: 32px;
-    background-color: #d7edff !important;
+    background-color: #fed7d7 !important;
 }
 
 .notify_bar-content {
     margin-left: 30px;
     font-size: 16px;
     position: relative;
-    2 top: -3px;
+    top: -3px;
 }
 
 .notify_bar-content i {
     margin-right: 20px;
-    color: #0074e8;
+    color: #f15560;
 }
 
 .notify_bar span {
@@ -149,7 +149,7 @@ td {
     color: #FDF2F1;
     text-align: center;
     background: #f15560;
-    transition: 0.3s0;
+    transition: 0.3s;
     border-radius: 10px;
     position: relative;
     right: 85px;
@@ -306,7 +306,7 @@ td {
 
 .accordion-008[open] div {
     margin-top: 32px;
-    transition: 0.25s;
+    transition: 0.5s;
     opacity: 1;
 }
 
